@@ -1,0 +1,36 @@
+grammar org.babu.xtext.training.smalljava.SmalljavaDsl with org.eclipse.xtext.common.Terminals
+
+generate smalljavaDsl "http://www.babu.org/xtext/training/smalljava/SmalljavaDsl"
+
+NameSpace:
+	'namespace' name=QName
+	imports+=Import*
+	smallClass=SmallClass;
+	QName:
+		ID('.'ID)*;
+
+	QNameWildCard:
+		QName('*')?;
+Import:
+	'import' importedNamespace=QNameWildCard
+;
+
+SmallClass:
+	'class' name=ID ('extends' superClass=[SmallClass|ID])?  '{'  //superClass is called features.
+	 attributes+=Attribute*
+	
+	'}';
+	
+Attribute:
+	datatype=DataType (array?='[]')?  name=ID
+;
+DataType:
+	{DataType} simpleType|smallClassType //Datatype is called ations
+;
+simpleType:
+	'String'|'boolean'|'int'|'float'
+;
+smallClassType:
+	type=[SmallClass]
+;
+

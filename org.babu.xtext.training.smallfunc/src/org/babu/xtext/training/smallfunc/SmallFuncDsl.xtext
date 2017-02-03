@@ -1,0 +1,39 @@
+grammar org.babu.xtext.training.smallfunc.SmallFuncDsl with org.eclipse.xtext.common.Terminals
+
+generate smallFuncDsl "http://www.babu.org/xtext/training/smallfunc/SmallFuncDsl"
+import "http://www.babu.org/xtext/training/smalljava/SmalljavaDsl" as smalljava
+
+NameSpace:
+	'namespace' name=QName
+	imports+=Import*
+	smallFunc=SmallFunc;
+
+QName:
+	ID ('.' ID)*;
+
+QNameWildCard:
+	QName ('*')?;
+
+Import:
+	'import' importedNamespace=QNameWildCard;
+
+SmallFunc:
+	'def' name=ID '(' (params+=Param (',' params+=Param)*)? ')' '{'
+	'}';
+
+Param:
+	dataType=DataType name=ID;
+
+Attribute:
+	datatype=DataType (array?='[]')? name=ID;
+
+DataType:
+	{DataType} simpleType | smallClassType //Datatype is called ations
+;
+
+simpleType:
+	'String' | 'boolean' | 'int' | 'float';
+
+smallClassType:
+	type=[smalljava::SmallClass];
+

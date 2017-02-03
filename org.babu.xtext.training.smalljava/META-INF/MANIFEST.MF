@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.babu.xtext.training.smalljava
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.babu.xtext.training.smalljava; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
+ org.eclipse.xtext.generator;resolution:=optional,
+ org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
+ org.eclipse.emf.codegen.ecore;resolution:=optional,
+ org.eclipse.emf.mwe.utils;resolution:=optional,
+ org.eclipse.emf.mwe2.launch;resolution:=optional,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.common,
+ org.antlr.runtime,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.babu.xtext.training.smalljava,
+ org.babu.xtext.training.smalljava.services,
+ org.babu.xtext.training.smalljava.smalljavaDsl,
+ org.babu.xtext.training.smalljava.smalljavaDsl.impl,
+ org.babu.xtext.training.smalljava.smalljavaDsl.util,
+ org.babu.xtext.training.smalljava.serializer,
+ org.babu.xtext.training.smalljava.parser.antlr,
+ org.babu.xtext.training.smalljava.parser.antlr.internal,
+ org.babu.xtext.training.smalljava.validation,
+ org.babu.xtext.training.smalljava.scoping,
+ org.babu.xtext.training.smalljava.generator,
+ org.babu.xtext.training.smalljava.formatting
+
