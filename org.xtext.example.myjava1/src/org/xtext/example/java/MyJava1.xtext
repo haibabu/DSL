@@ -1,0 +1,9 @@
+grammar org.xtext.example.java.MyJava1 with org.eclipse.xtext.common.Terminals
+
+generate myJava1 "http://www.xtext.org/example/java/MyJava1"
+
+SmallClass:
+	'class' name=ID ('extends' superClass=[SmallClass|ID])?  '{'  //superClass is called features.
+	
+	'}';
+	

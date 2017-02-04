@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.myjava1/src-gen" editDirectory="/org.xtext.example.myjava1.edit/src"
+    editorDirectory="/org.xtext.example.myjava1.editor/src" modelPluginID="org.xtext.example.myjava1"
+    forceOverwrite="true" modelName="MyJava1" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.myjava1.edit"
+    editorPluginID="org.xtext.example.myjava1.editor" runtimeVersion="2.10">
+  <genPackages prefix="MyJava1" basePackage="org.xtext.example.java" disposableProviderFactory="true"
+      fileExtensions="java" ecorePackage="MyJava1.ecore#/">
+    <genClasses ecoreClass="MyJava1.ecore#//SmallClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyJava1.ecore#//SmallClass/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MyJava1.ecore#//SmallClass/superClass"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

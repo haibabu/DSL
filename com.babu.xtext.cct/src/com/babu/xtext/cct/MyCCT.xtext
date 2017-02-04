@@ -1,0 +1,26 @@
+grammar com.babu.xtext.cct.MyCCT with org.eclipse.xtext.common.Terminals
+
+generate myCCT "http://www.babu.com/xtext/cct/MyCCT"
+
+
+CCT:
+	file=File
+	Loop+=Loop*
+	condition+=Condition
+	value+=Value
+;
+
+File:
+	'@FILE('name=ID')'
+;
+
+Loop:
+	'@FOR('name=ID')'
+;
+
+Condition:
+	'@IF('name=ID')'
+;
+Value:
+	'@VALUE('name=ID')'
+;

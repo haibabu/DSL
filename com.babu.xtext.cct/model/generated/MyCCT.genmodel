@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.babu.xtext.cct/src-gen" editDirectory="/com.babu.xtext.cct.edit/src"
+    editorDirectory="/com.babu.xtext.cct.editor/src" modelPluginID="com.babu.xtext.cct"
+    forceOverwrite="true" modelName="MyCCT" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.babu.xtext.cct.edit"
+    editorPluginID="com.babu.xtext.cct.editor" runtimeVersion="2.10">
+  <genPackages prefix="MyCCT" basePackage="com.babu.xtext.cct" disposableProviderFactory="true"
+      fileExtensions="cct" ecorePackage="MyCCT.ecore#/">
+    <genClasses ecoreClass="MyCCT.ecore#//CCT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyCCT.ecore#//CCT/file"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyCCT.ecore#//CCT/Loop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyCCT.ecore#//CCT/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyCCT.ecore#//CCT/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyCCT.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyCCT.ecore#//File/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyCCT.ecore#//Loop">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyCCT.ecore#//Loop/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyCCT.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyCCT.ecore#//Condition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MyCCT.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyCCT.ecore#//Value/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
